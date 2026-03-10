@@ -259,13 +259,40 @@ const TRANSLATIONS = {
   }
 };
 
-let currentLang = localStorage.getItem('portfolio-lang') || 'fr';
+/* ---- State & Language ---- */
+const TITLES_FR = [
+  `Ingénieur Logiciel`,
+  `Développeur Full Stack`,
+  `Passionné de Robotique`,
+  `Assistant Technique (AER)`,
+  `Problem Solver`
+];
+
+const TITLES_EN = [
+  `Software Engineer`,
+  `Full Stack Developer`,
+  `Robotics Enthusiast`,
+  `Technical Mentor`,
+  `Problem Solver`
+];
+
+let currentLang = 'fr';
+try {
+  currentLang = localStorage.getItem('portfolio-lang') || 'fr';
+} catch (e) {
+  console.warn('LocalStorage is not accessible:', e);
+}
+
+let TITLES_LIST = currentLang === 'fr' ? TITLES_FR : TITLES_EN;
+let titleIdx = 0;
+let charIdx = 0;
+let isDeleting = false;
 
 function updateTexts() {
   // Update normal texts
   document.querySelectorAll('[data-t9n]').forEach(el => {
     const key = el.getAttribute('data-t9n');
-    if (TRANSLATIONS[currentLang][key]) {
+    if (TRANSLATIONS[currentLang] && TRANSLATIONS[currentLang][key]) {
       el.innerHTML = TRANSLATIONS[currentLang][key];
     }
   });
@@ -273,7 +300,7 @@ function updateTexts() {
   // Update placeholders
   document.querySelectorAll('[data-t9n-placeholder]').forEach(el => {
     const key = el.getAttribute('data-t9n-placeholder');
-    if (TRANSLATIONS[currentLang][key]) {
+    if (TRANSLATIONS[currentLang] && TRANSLATIONS[currentLang][key]) {
       el.placeholder = TRANSLATIONS[currentLang][key];
     }
   });
@@ -281,58 +308,32 @@ function updateTexts() {
   // Update language button
   const langBtnText = document.getElementById('lang-text');
   const langFlag = document.getElementById('lang-flag-container');
-  if (currentLang === 'fr') {
-    langBtnText.textContent = 'EN';
-    langFlag.textContent = '🇺🇸';
-  } else {
-    langBtnText.textContent = 'FR';
-    langFlag.textContent = '🇫🇷';
+  if (langBtnText && langFlag) {
+    if (currentLang === 'fr') {
+      langBtnText.textContent = 'EN';
+      langFlag.textContent = '🇺🇸';
+    } else {
+      langBtnText.textContent = 'FR';
+      langFlag.textContent = '🇫🇷';
+    }
   }
 
   // Update typewriter TITLES
   TITLES_LIST = currentLang === 'fr' ? TITLES_FR : TITLES_EN;
-  // Reset typewriter if language changed to avoid mess
+  // Reset typewriter indicators to avoid index out of bounds if list lengths differ
   titleIdx = 0;
   charIdx = 0;
   isDeleting = false;
 }
 
-const langBtn = document.getElementById('lang-btn');
-if (langBtn) {
-  langBtn.addEventListener('click', () => {
-    currentLang = currentLang === 'fr' ? 'en' : 'fr';
-    localStorage.setItem('portfolio-lang', currentLang);
-    updateTexts();
-  });
-}
-
-const TITLES_FR = [
-  'Ingénieur Logiciel',
-  'Développeur Full Stack',
-  'Passionné de Robotique',
-  'Assistant Technique (AER)',
-  'Problem Solver'
-];
-
-const TITLES_EN = [
-  'Software Engineer',
-  'Full Stack Developer',
-  'Robotics Enthusiast',
-  'Technical Mentor',
-  'Problem Solver'
-];
-
-let TITLES_LIST = currentLang === 'fr' ? TITLES_FR : TITLES_EN;
-
 /* ---- Typewriter Effect ---- */
-let titleIdx = 0;
-let charIdx = 0;
-let isDeleting = false;
 const typeEl = document.getElementById('typewriter');
 
 function typewrite() {
+  if (!typeEl) return;
   const current = TITLES_LIST[titleIdx];
   if (!current) return;
+
   if (isDeleting) {
     typeEl.textContent = current.substring(0, charIdx - 1);
     charIdx--;
@@ -351,8 +352,25 @@ function typewrite() {
   const speed = isDeleting ? 60 : 100;
   setTimeout(typewrite, speed);
 }
-setTimeout(typewrite, 600);
-updateTexts(); // Initialize texts on load
+
+// Initialization and Event Listeners
+document.addEventListener('DOMContentLoaded', () => {
+  const langBtn = document.getElementById('lang-btn');
+  if (langBtn) {
+    langBtn.addEventListener('click', () => {
+      currentLang = currentLang === 'fr' ? 'en' : 'fr';
+      try {
+        localStorage.setItem('portfolio-lang', currentLang);
+      } catch (e) {
+        console.error('Could not save language preference:', e);
+      }
+      updateTexts();
+    });
+  }
+
+  updateTexts();
+  setTimeout(typewrite, 600);
+});
 
 
 /* ---- Particle Canvas ---- */
