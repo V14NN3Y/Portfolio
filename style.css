@@ -197,6 +197,40 @@ section {
 .logo-bracket { color: var(--purple); }
 .logo-accent { color: var(--cyan); }
 
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+
+.lang-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lang-btn:hover {
+  background: rgba(108, 99, 255, 0.1);
+  border-color: var(--purple);
+  color: var(--white);
+}
+
+.lang-flag {
+  width: 16px;
+  height: 11px;
+  object-fit: cover;
+  border-radius: 1px;
+}
+
 .nav-links {
   display: flex;
   gap: 4px;
