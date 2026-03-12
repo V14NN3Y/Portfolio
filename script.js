@@ -58,7 +58,14 @@ const TRANSLATIONS = {
     'projects.filter-web': `Web`,
     'projects.filter-system': `Systèmes & IA`,
     'projects.filter-hardware': `Hardware`,
-    'projects.staffbar-title': `StaffBar — Plateforme de recrutement`,
+    'projects.role-web-fullstack': `Développeur Full Stack`,
+    'projects.role-web-fullstack-ai': `Développeur Full Stack & IA`,
+    'projects.role-frontend': `Développeur Frontend`,
+    'projects.role-backend': `Développeur Backend`,
+    'projects.role-ai': `Ingénieur IA`,
+    'projects.role-systems': `Développeur Systèmes & Réseaux`,
+    'projects.role-cpp': `Développeur Systèmes C++`,
+    'projects.staffbar-title': `StaffBar`,
     'projects.staffbar-desc': `Plateforme moderne de mise en relation candidats/recruteurs avec système de messagerie en temps réel, filtres avancés et gestion de profils.`,
     'projects.staffbar-h1': `✓ Auth & gestion de profils`,
     'projects.staffbar-h2': `✓ Messagerie intégrée`,
@@ -193,7 +200,14 @@ const TRANSLATIONS = {
     'projects.filter-web': `Web`,
     'projects.filter-system': `System & AI`,
     'projects.filter-hardware': `Hardware`,
-    'projects.staffbar-title': `StaffBar — Recruitment Platform`,
+    'projects.role-web-fullstack': `Full Stack Developer`,
+    'projects.role-web-fullstack-ai': `Full Stack & AI Developer`,
+    'projects.role-frontend': `Frontend Developer`,
+    'projects.role-backend': `Backend Developer`,
+    'projects.role-ai': `AI Engineer`,
+    'projects.role-systems': `Systems & Network Developer`,
+    'projects.role-cpp': `C++ Systems Developer`,
+    'projects.staffbar-title': `StaffBar`,
     'projects.staffbar-desc': `Modern platform connecting candidates/recruiters with real-time messaging system, advanced filters, and profile management.`,
     'projects.staffbar-h1': `✓ Auth & profile management`,
     'projects.staffbar-h2': `✓ Integrated messaging`,
@@ -388,6 +402,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
   updateTexts();
   setTimeout(typewrite, 600);
+
+  // Theme Toggle Logic
+  const themeBtn = document.getElementById('theme-btn');
+  const sunIcon = document.getElementById('theme-icon-sun');
+  const moonIcon = document.getElementById('theme-icon-moon');
+  
+  // Initialize theme
+  let currentTheme = localStorage.getItem('portfolio-theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  updateThemeIcons(currentTheme);
+
+  if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+      currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', currentTheme);
+      localStorage.setItem('portfolio-theme', currentTheme);
+      updateThemeIcons(currentTheme);
+      
+      // Update particles color if they exist
+      if (typeof initParticles === 'function') {
+        initParticles(); 
+      }
+    });
+  }
+
+  function updateThemeIcons(theme) {
+    if (theme === 'light') {
+      sunIcon.classList.add('hidden');
+      moonIcon.classList.remove('hidden');
+    } else {
+      sunIcon.classList.remove('hidden');
+      moonIcon.classList.add('hidden');
+    }
+  }
 });
 
 
@@ -424,16 +472,25 @@ class Particle {
     }
   }
   draw() {
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    const finalOpacity = isLight ? this.opacity * 0.4 : this.opacity;
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(${this.color}, ${this.opacity})`;
+    ctx.fillStyle = `rgba(${this.color}, ${finalOpacity})`;
     ctx.fill();
   }
 }
 
-for (let i = 0; i < PARTICLE_COUNT; i++) particles.push(new Particle());
+// Wrap in init function to re-call on theme change
+function initParticles() {
+  particles.length = 0;
+  for (let i = 0; i < PARTICLE_COUNT; i++) particles.push(new Particle());
+}
+initParticles();
 
 function connectParticles() {
+  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+  const lineOpacityBase = isLight ? 0.04 : 0.08;
   for (let i = 0; i < particles.length; i++) {
     for (let j = i + 1; j < particles.length; j++) {
       const dx = particles[i].x - particles[j].x;
@@ -441,7 +498,7 @@ function connectParticles() {
       const dist = Math.sqrt(dx * dx + dy * dy);
       if (dist < 120) {
         ctx.beginPath();
-        ctx.strokeStyle = `rgba(108,99,255,${0.08 * (1 - dist / 120)})`;
+        ctx.strokeStyle = `rgba(108,99,255,${lineOpacityBase * (1 - dist / 120)})`;
         ctx.lineWidth = 0.5;
         ctx.moveTo(particles[i].x, particles[i].y);
         ctx.lineTo(particles[j].x, particles[j].y);

@@ -29,6 +29,12 @@
       <li><a href="#education" class="nav-link" data-t9n="nav.education">Formation</a></li>
       <li><a href="#contact" class="nav-link" data-t9n="nav.contact">Contact</a></li>
     </ul>
+    <div class="theme-toggle">
+      <button id="theme-btn" class="theme-btn" aria-label="Toggle Theme">
+        <svg id="theme-icon-sun" class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"></line></svg>
+        <svg id="theme-icon-moon" class="theme-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
+    </div>
     <div class="lang-toggle">
       <button id="lang-btn" class="lang-btn" aria-label="Switch Language">
         <span id="lang-text">EN</span>
@@ -311,6 +317,7 @@
             </div>
           </div>
           <h3 data-t9n="projects.vote-title">Epitech Bénin Vote BDE</h3>
+          <span class="project-role" data-t9n="projects.role-web-fullstack">Full Stack Developer</span>
           <p data-t9n="projects.vote-desc">Plateforme de <strong>vote numérique sécurisée</strong> pour les élections du BDE. Système de vote pondéré, dashboard administrateur temps réel, résultats en graphiques et journalisation d'audit complète pour garantir la transparence.</p>
           <div class="project-highlights">
             <span data-t9n="projects.vote-h1">✓ Vote pondéré</span>
@@ -331,7 +338,8 @@
               <span class="proj-link proj-norepo" title="Dépôt privé" aria-label="Dépôt privé"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
             </div>
           </div>
-          <h3 data-t9n="projects.stockcontrol-title">StockControl — Gestion Intelligente pour Artisans</h3>
+          <h3 data-t9n="projects.stockcontrol-title">StockControl</h3>
+          <span class="project-role" data-t9n="projects.role-web-fullstack-ai">Full Stack & AI Developer</span>
           <p data-t9n="projects.stockcontrol-desc">Application web <strong>mobile-first</strong> de gestion de stocks pour artisans du secteur boissons. Intègre l'<strong>IA Google Gemini</strong> pour analyser les données et proposer des conseils d'achat, réduire les pertes et optimiser la rentabilité.</p>
           <div class="project-highlights">
             <span data-t9n="projects.stockcontrol-h1">✓ Suivi stocks temps réel</span>
@@ -352,7 +360,8 @@
               <span class="proj-link proj-norepo" title="Dépôt privé" aria-label="Dépôt privé"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
             </div>
           </div>
-          <h3 data-t9n="projects.staffbar-title">StaffBar — Plateforme de recrutement</h3>
+          <h3 data-t9n="projects.staffbar-title">StaffBar</h3>
+          <span class="project-role" data-t9n="projects.role-frontend">Frontend Developer</span>
           <p data-t9n="projects.staffbar-desc">Plateforme moderne de mise en relation candidats/recruteurs avec système de messagerie en temps réel, filtres avancés et gestion de profils.</p>
           <div class="project-highlights">
             <span data-t9n="projects.staffbar-h1">✓ Auth & gestion de profils</span>
@@ -373,6 +382,7 @@
             </div>
           </div>
           <h3 data-t9n="projects.marketplace-title">Marketplace Backend</h3>
+          <span class="project-role" data-t9n="projects.role-backend">Backend Developer</span>
           <p data-t9n="projects.marketplace-desc">Backend e-commerce robuste avec système de publication/modification/suppression d'annonces et interface d'administration dynamique pour la gestion de contenu.</p>
           <div class="project-highlights">
             <span data-t9n="projects.marketplace-h1">✓ CRUD annonces</span>
@@ -393,6 +403,7 @@
             </div>
           </div>
           <h3 data-t9n="projects.gomoku-title">Gomoku AI</h3>
+          <span class="project-role" data-t9n="projects.role-ai">AI Engineer</span>
           <p data-t9n="projects.gomoku-desc">Intelligence artificielle haute performance pour le jeu de Gomoku. Réseau neuronal utilisant l'algorithme <strong>Minimax avec élagage Alpha-Beta</strong> pour une prédiction optimale des coups.</p>
           <div class="project-highlights">
             <span data-t9n="projects.gomoku-h1">✓ Minimax + Alpha-Beta</span>
@@ -411,7 +422,8 @@
               <a href="https://github.com/Nouhouayikevin/Zappy" target="_blank" class="proj-link" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
             </div>
           </div>
-          <h3 data-t9n="projects.zappy-title">Zappy — Game Server & AI Client</h3>
+          <h3 data-t9n="projects.zappy-title">Zappy</h3>
+          <span class="project-role" data-t9n="projects.role-systems">Systems & Network Developer</span>
           <p data-t9n="projects.zappy-desc">Serveur de jeu temps réel en C et client IA autonome en Python capable de collecte de ressources, communication inter-agents et évolution stratégique dans un environnement multi-agents.</p>
           <div class="project-highlights">
             <span data-t9n="projects.zappy-h1">✓ Server temps réel</span>
@@ -431,7 +443,8 @@
               <span class="proj-link proj-norepo" title="Pas de dépôt public" aria-label="Pas de dépôt public"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
             </div>
           </div>
-          <h3 data-t9n="projects.arcade-title">Arcade Engine — Moteur de jeu modulaire</h3>
+          <h3 data-t9n="projects.arcade-title">Arcade Engine</h3>
+          <span class="project-role" data-t9n="projects.role-cpp">C++ Systems Developer</span>
           <p data-t9n="projects.arcade-desc">Moteur de jeu architécturé avec chargement dynamique de bibliothèques graphiques à l'exécution via <code>dlopen</code>, permettant le switch de renderer sans recompilation.</p>
           <div class="project-highlights">
             <span data-t9n="projects.arcade-h1">✓ dlopen dynamic libs</span>
