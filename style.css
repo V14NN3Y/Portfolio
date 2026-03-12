@@ -335,8 +335,8 @@ section {
   width: 20px;
 }
 
-.nav-cta {
-  background: var(--gradient);
+/* Botons de Navigation (CTA) */
+.cv-btn, .nav-cta {
   color: #fff;
   border: none;
   padding: 10px 22px;
@@ -345,10 +345,25 @@ section {
   font-size: 0.875rem;
   cursor: pointer;
   transition: var(--transition);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
 }
-.nav-cta:hover {
+
+.cv-btn {
+  background: linear-gradient(135deg, #6c63ff, #00d4ff);
+}
+
+.nav-cta {
+  background: var(--gradient);
+}
+
+.cv-btn:hover, .nav-cta:hover {
   box-shadow: 0 4px 20px rgba(108,99,255,0.4);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  color: #fff;
 }
 .hamburger {
   display: none;
