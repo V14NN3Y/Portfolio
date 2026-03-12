@@ -38,21 +38,34 @@
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ---- Light Theme Variables ---- */
+/* ---- Light Theme Variables (Cloud Premium) ---- */
 :root[data-theme="light"] {
-  --bg-primary: #f8f9fa;
+  --bg-primary: #f2f5f9;
   --bg-secondary: #ffffff;
-  --bg-card: rgba(0, 0, 0, 0.03);
-  --bg-card-hover: rgba(0, 0, 0, 0.06);
-  --border: rgba(0, 0, 0, 0.08);
+  --bg-card: rgba(255, 255, 255, 0.7);
+  --bg-card-hover: rgba(255, 255, 255, 0.9);
+  --border: rgba(108, 99, 255, 0.1);
   --border-hover: rgba(108, 99, 255, 0.3);
 
-  --text-primary: #1a1a2e;
-  --text-secondary: #4a4a6a;
-  --text-muted: #7a7a9a;
+  --text-primary: #1e1e35;
+  --text-secondary: #585876;
+  --text-muted: #8d8da5;
 
-  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.06);
-  --shadow-glow: 0 0 40px rgba(108, 99, 255, 0.1);
+  --shadow-card: 0 10px 30px rgba(108, 99, 255, 0.08);
+  --shadow-glow: 0 0 50px rgba(108, 99, 255, 0.05);
+  
+  --particle-opacity: 0.3;
+}
+
+/* Global Transition for Theme Switching */
+body {
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+section, nav, div, header, footer, .project-card, .skill-card, .stat-card {
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ---- Reset & Base ---- */
@@ -248,9 +261,15 @@ section {
   border-radius: 1px;
 }
 
+.controls-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 12px;
+}
+
 /* Theme Toggle */
 .theme-toggle {
-  margin: 0 12px;
   display: flex;
   align-items: center;
 }
@@ -937,6 +956,21 @@ section {
   opacity: 0.5;
 }
 .proj-norepo svg { width: 14px; height: 14px; }
+
+/* Light mode refinements for cards */
+:root[data-theme="light"] .project-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(108, 99, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(108, 99, 255, 0.05);
+}
+
+:root[data-theme="light"] .project-card:hover {
+  border-color: var(--purple);
+  box-shadow: 0 15px 40px rgba(108, 99, 255, 0.12);
+  transform: translateY(-8px);
+}
 
 .project-card h3 {
   font-size: 1.2rem;
