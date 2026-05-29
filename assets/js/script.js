@@ -570,21 +570,31 @@ function initMouseParallax() {
 }
 
 /* ========================================
-   SCROLL PARALLAX
+   SCROLL PARALLAX — content shift
    ======================================== */
 function initScrollParallax() {
-    const sections = document.querySelectorAll('section');
-    if (!sections.length) return;
+    const containers = document.querySelectorAll('section > .container');
+    if (!containers.length) return;
 
-    window.addEventListener('scroll', () => {
-        const scrollY = window.pageYOffset;
-        sections.forEach(section => {
-            const rect = section.getBoundingClientRect();
+    function apply() {
+        containers.forEach(el => {
+            const rect = el.parentElement.getBoundingClientRect();
             const speed = 0.04;
-            const yOffset = rect.top * speed;
-            section.style.backgroundPosition = `50% ${yOffset}px`;
+            const raw = rect.top * speed;
+            const clamped = Math.max(-25, Math.min(25, raw));
+            el.style.transform = clamped !== 0 ? `translateY(${clamped}px)` : '';
         });
+    }
+
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(() => { apply(); ticking = false; });
+            ticking = true;
+        }
     }, { passive: true });
+
+    apply();
 }
 
 /* ========================================
@@ -646,17 +656,28 @@ function initThemeToggle() {
 }
 
 /* ========================================
-   SCROLL REVEAL
+   SCROLL REVEAL — staggered cascade
    ======================================== */
 function initReveal() {
     const revealEls = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
     if (!revealEls.length) return;
 
+    document.querySelectorAll('section').forEach(section => {
+        const els = section.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
+        els.forEach((el, i) => {
+            const delay = Math.min(i * 0.07, 0.5);
+            el.style.setProperty('--delay', `${delay}s`);
+        });
+    });
+
     const obs = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) entry.target.classList.add('visible');
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
     revealEls.forEach(el => obs.observe(el));
 }
 
