@@ -153,6 +153,7 @@ section {
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 0.7s ease, transform 0.7s ease;
+    transition-delay: var(--delay, 0s);
 }
 
 .reveal-left {
@@ -1833,4 +1834,59 @@ footer {
     right: 24px;
     z-index: 1000;
     text-align: center;
+}
+
+/* Light theme mobile menu */
+:root[data-theme="light"] .nav-open .nav-links {
+    background: rgba(255, 255, 255, 0.98);
+}
+
+/* Hamburger → X animation */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ============================================================
+   CUSTOM SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--purple);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--purple-light);
+}
+
+/* Firefox */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--purple) var(--bg-primary);
+}
+
+/* ============================================================
+   PRINT STYLES
+   ============================================================ */
+@media print {
+    #navbar, .scroll-indicator, .nav-actions, .hamburger,
+    .contact-form, .hero-socials, footer {
+        display: none !important;
+    }
+    section { padding: 40px 0; break-inside: avoid; }
 }

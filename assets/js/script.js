@@ -156,13 +156,140 @@ const TRANSLATIONS = {
         'nav.experience': `Experience`,
         'nav.education': `Education`,
         'nav.contact': `Contact`,
-        'nav.cv': `Download CV`,
         'nav.hire': `Hire me`,
+        'nav.cv': `Download CV`,
         'hero.badge': `Available for missions / internship`,
         'hero.desc': `Software Engineer combining <strong>Full Stack</strong> and <strong>Embedded Systems</strong> expertise. I build end-to-end solutions — from hardware (Arduino) to scalable web platforms (React, Django).`,
         'hero.cta-work': `View my work`,
         'hero.cta-contact': `Contact me`,
-        /* Additional English translations omitted for brevity */
+        'about.tag': `01. About`,
+        'about.title': `Who am I<span class="gradient-text">?</span>`,
+        'about.p1': `Final-year student in the <strong>Bachelor's in Computer Expertise</strong> at Epitech Bénin, I am passionate about building complete software solutions — from user interfaces to embedded systems.`,
+        'about.p2': `My journey has led me to design full-stack web platforms, AI for games, business management systems integrating AI, and even robotics prototypes. I firmly believe the best engineers understand the problem before choosing the tool.`,
+        'about.p3': `As a <strong>Technical Assistant (AER)</strong> and <strong>Tech Lead of the Student Office (BDE)</strong> at Epitech Bénin, I have developed a real taste for knowledge sharing and technical team coordination.`,
+        'about.stat-projects': `Projects completed`,
+        'about.stat-exp': `Work experiences`,
+        'about.stat-code': `Years coding`,
+        'about.interests-title': `Interests`,
+        'about.soft-skills-title': `Soft Skills`,
+        'about.ss-leadership-title': `Collaborative Leadership`,
+        'about.ss-leadership-desc': `Active listening and team consensus.`,
+        'about.ss-mentoring-title': `Teaching & Mentoring`,
+        'about.ss-mentoring-desc': `Workshop facilitation and technical support.`,
+        'about.ss-organization-title': `Agile Organization`,
+        'about.ss-organization-desc': `Trello/Notion management and rapid iteration.`,
+        'about.ss-teamwork-title': `Team Spirit`,
+        'about.ss-teamwork-desc': `Flexibility and collective facilitation.`,
+        'about.interest-chess-title': `Chess`,
+        'about.interest-chess-desc': `Strategy, anticipation and long-term vision`,
+        'about.interest-prog-title': `Competitive Programming`,
+        'about.interest-prog-desc': `Coding Game — Algorithmic problem solving`,
+        'about.interest-music-title': `Music`,
+        'about.interest-music-desc': `Creativity and artistic discipline`,
+        'about.interest-sport-title': `Gym`,
+        'about.interest-sport-desc': `Discipline and self-improvement`,
+        'skills.tag': `02. Skills`,
+        'skills.title': `Tech <span class="gradient-text">Stack</span>`,
+        'skills.web': `Web & Frontend`,
+        'skills.backend': `Backend & API`,
+        'skills.system': `Systems & Low-level`,
+        'skills.hardware': `Hardware & Robotics`,
+        'skills.ai': `AI & Algorithms`,
+        'skills.devops': `Tools & DevOps`,
+        'projects.tag': `03. Projects`,
+        'projects.title': `Key <span class="gradient-text">Projects</span>`,
+        'projects.filter-all': `All`,
+        'projects.filter-web': `Web`,
+        'projects.filter-system': `Systems & AI`,
+        'projects.filter-hardware': `Hardware`,
+        'projects.role-web-fullstack': `Full Stack Developer`,
+        'projects.role-web-fullstack-ai': `Full Stack & AI Developer`,
+        'projects.role-frontend': `Frontend Developer`,
+        'projects.role-backend': `Backend Developer`,
+        'projects.role-ai': `AI Engineer`,
+        'projects.role-systems': `Systems & Network Developer`,
+        'projects.role-cpp': `C++ Systems Developer`,
+        'projects.staffbar-title': `StaffBar`,
+        'projects.staffbar-desc': `Modern recruitment platform with real-time messaging, advanced filters and profile management.`,
+        'projects.staffbar-h1': `✓ Auth & profile management`,
+        'projects.staffbar-h2': `✓ Built-in messaging`,
+        'projects.staffbar-h3': `✓ Advanced filters`,
+        'projects.stockcontrol-title': `StockControl — Smart Inventory for Artisans`,
+        'projects.stockcontrol-desc': `<strong>Mobile-first</strong> inventory management web app for beverage artisans. Integrates <strong>Google Gemini AI</strong> to analyze data and provide purchasing recommendations, reduce waste and optimize profitability.`,
+        'projects.stockcontrol-h1': `✓ Real-time stock tracking`,
+        'projects.stockcontrol-h2': `✓ Gemini AI integration`,
+        'projects.stockcontrol-h3': `✓ Multi-company (RLS)`,
+        'projects.stockcontrol-h4': `✓ Expiry alerts`,
+        'projects.vote-title': `Epitech Bénin Vote BDE`,
+        'projects.vote-desc': `<strong>Secure digital voting</strong> platform for student office elections. Weighted voting system, real-time admin dashboard, chart results and complete audit trail for transparency.`,
+        'projects.vote-h1': `✓ Weighted voting`,
+        'projects.vote-h2': `✓ Real-time dashboard`,
+        'projects.vote-h3': `✓ Full audit trail`,
+        'projects.vote-h4': `✓ Recharts graphs`,
+        'projects.marketplace-title': `Marketplace Backend`,
+        'projects.marketplace-desc': `Robust e-commerce backend with ad CRUD system and dynamic admin interface for content management.`,
+        'projects.marketplace-h1': `✓ Ad CRUD`,
+        'projects.marketplace-h2': `✓ Admin interface`,
+        'projects.marketplace-h3': `✓ User management`,
+        'projects.gomoku-title': `Gomoku AI`,
+        'projects.gomoku-desc': `High-performance AI for Gomoku. Neural network using the <strong>Minimax algorithm with Alpha-Beta pruning</strong> for optimal move prediction.`,
+        'projects.gomoku-h1': `✓ Minimax + Alpha-Beta`,
+        'projects.gomoku-h2': `✓ High performance`,
+        'projects.zappy-title': `Zappy — Game Server & AI Client`,
+        'projects.zappy-desc': `Real-time game server in C and autonomous Python AI client capable of resource gathering, inter-agent communication and strategic evolution in a multi-agent environment.`,
+        'projects.zappy-h1': `✓ Real-time server`,
+        'projects.zappy-h2': `✓ Multi-agent AI`,
+        'projects.zappy-h3': `✓ Network protocol`,
+        'projects.arcade-title': `Arcade Engine — Modular Game Engine`,
+        'projects.arcade-desc': `Game engine with dynamic graphic library loading at runtime via <code>dlopen</code>, allowing renderer switching without recompilation.`,
+        'projects.arcade-h1': `✓ dlopen dynamic libs`,
+        'projects.arcade-h2': `✓ Modular architecture`,
+        'experience.tag': `04. Experience`,
+        'experience.title': `Professional <span class="gradient-text">Journey</span>`,
+        'experience.bde-title': `Tech Lead`,
+        'experience.bde-t1': `Leading the technical department, supporting and monitoring student projects`,
+        'experience.bde-t2': `Coordinating technical support for campus events`,
+        'experience.bde-t3': `Managing all tech associations (Cybersecurity, Robotics, AI, Web Development, Game Development, Blockchain)`,
+        'experience.aer-date': `March 2025 — Present`,
+        'experience.aer-title': `Technical Assistant — AER`,
+        'experience.aer-t1': `Guiding students in understanding and solving technical projects`,
+        'experience.aer-t2': `Leading workshops and support sessions in programming and project methodology`,
+        'experience.aer-t3': `Code reviews to ensure quality and best practices`,
+        'experience.cerb-date': `October — December 2024`,
+        'experience.cerb-title': `Robotics Intern`,
+        'experience.cerb-t1': `Developing robotics prototypes and programming Arduino microcontrollers`,
+        'experience.cerb-t2': `Organizing and leading educational workshops for middle school students`,
+        'experience.cerb-t3': `Introducing young audiences to robotics and programming`,
+        'education.tag': `05. Education`,
+        'education.title': `Academic <span class="gradient-text">Background</span>`,
+        'education.bachelor-date': `February 2024 — Present`,
+        'education.badge-current': `In progress`,
+        'education.bachelor-title': `Bachelor's in Computer Expertise`,
+        'education.bachelor-desc': `Advanced algorithms, Artificial Intelligence, Web Development, Embedded Systems. Software architecture, Unix/Linux systems, low-level programming.`,
+        'education.badge-obtained': `Completed`,
+        'education.bac-title': `Baccalaureate Series C`,
+        'education.bac-desc': `Specialization in Mathematics and Physics. Graduated with honors.`,
+        'education.badge-cert': `Certifications`,
+        'education.cert-title': `Programming Certifications`,
+        'education.cert-desc': `Solving algorithmic challenges in C, Python, C++. Development speed and code optimization under constraints.`,
+        'contact.tag': `06. Contact`,
+        'contact.title': `Let's work <span class="gradient-text">together</span>`,
+        'contact.lead': `Available for freelance missions, internships, apprenticeships or full-time opportunities. Feel free to reach out!`,
+        'contact.email-label': `Email`,
+        'contact.phone-label': `Phone`,
+        'contact.loc-label': `Location`,
+        'contact.loc-value': `Fifadji C/1850, Cotonou, Benin`,
+        'contact.form-name': `Full name`,
+        'contact.placeholder-name': `Your name`,
+        'contact.form-email': `Email`,
+        'contact.placeholder-email': `your@email.com`,
+        'contact.form-subject': `Subject`,
+        'contact.placeholder-subject': `Opportunity / Collaboration / Question`,
+        'contact.form-message': `Message`,
+        'contact.placeholder-message': `Describe your project or inquiry...`,
+        'contact.form-submit': `Send message`,
+        'footer.text': `Designed & developed by <strong>Bill Adjagboni</strong> — Cotonou, Benin 🇧🇯`,
+        'footer.copy': `© 2026 Bill Adjagboni. All rights reserved.`,
     }
 };
 
@@ -254,6 +381,288 @@ function typewrite() {
     setTimeout(typewrite, speed);
 }
 
+/* ========================================
+   PARTICLES CANVAS
+   ======================================== */
+function initParticles() {
+    const canvas = document.getElementById('particles-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    const hero = document.getElementById('hero');
+    let particles = [];
+    let mouse = { x: null, y: null };
+    let animId;
+
+    function resize() {
+        canvas.width = hero.offsetWidth;
+        canvas.height = hero.offsetHeight;
+    }
+
+    function create(count) {
+        particles = [];
+        for (let i = 0; i < count; i++) {
+            particles.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                vx: (Math.random() - 0.5) * 0.4,
+                vy: (Math.random() - 0.5) * 0.4,
+                r: Math.random() * 2 + 0.5
+            });
+        }
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+        const baseColor = isLight ? '108, 99, 255' : '108, 99, 255';
+
+        for (let i = 0; i < particles.length; i++) {
+            const p = particles[i];
+            p.x += p.vx;
+            p.y += p.vy;
+            if (p.x < 0) p.x = canvas.width;
+            if (p.x > canvas.width) p.x = 0;
+            if (p.y < 0) p.y = canvas.height;
+            if (p.y > canvas.height) p.y = 0;
+
+            if (mouse.x !== null) {
+                const dx = p.x - mouse.x;
+                const dy = p.y - mouse.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < 100) {
+                    const force = (100 - dist) / 100;
+                    p.vx += (dx / (dist || 1)) * force * 0.02;
+                    p.vy += (dy / (dist || 1)) * force * 0.02;
+                }
+            }
+
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(${baseColor}, 0.5)`;
+            ctx.fill();
+
+            for (let j = i + 1; j < particles.length; j++) {
+                const p2 = particles[j];
+                const dx = p.x - p2.x;
+                const dy = p.y - p2.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < 150) {
+                    ctx.beginPath();
+                    ctx.moveTo(p.x, p.y);
+                    ctx.lineTo(p2.x, p2.y);
+                    const alpha = (1 - dist / 150) * 0.3;
+                    ctx.strokeStyle = `rgba(${baseColor}, ${alpha})`;
+                    ctx.lineWidth = 0.5;
+                    ctx.stroke();
+                }
+            }
+        }
+        animId = requestAnimationFrame(draw);
+    }
+
+    hero.addEventListener('mousemove', (e) => {
+        const rect = hero.getBoundingClientRect();
+        mouse.x = e.clientX - rect.left;
+        mouse.y = e.clientY - rect.top;
+    });
+    hero.addEventListener('mouseleave', () => { mouse.x = null; mouse.y = null; });
+
+    resize();
+    create(Math.min(Math.floor((canvas.width * canvas.height) / 8000), 80));
+    draw();
+    window.addEventListener('resize', () => { resize(); create(60); });
+}
+
+/* ========================================
+   HAMBURGER MENU
+   ======================================== */
+function initHamburger() {
+    const hamburger = document.getElementById('hamburger');
+    const navbar = document.getElementById('navbar');
+    if (!hamburger || !navbar) return;
+
+    hamburger.addEventListener('click', () => {
+        navbar.classList.toggle('nav-open');
+        hamburger.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            navbar.classList.remove('nav-open');
+            hamburger.classList.remove('active');
+        });
+    });
+}
+
+/* ========================================
+   PROJECT FILTERS
+   ======================================== */
+function initProjectFilters() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    if (!filterBtns.length || !projectCards.length) return;
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const filter = btn.getAttribute('data-filter');
+            projectCards.forEach(card => {
+                card.classList.toggle('hidden', filter !== 'all' && card.getAttribute('data-category') !== filter);
+            });
+        });
+    });
+}
+
+/* ========================================
+   CONTACT FORM
+   ======================================== */
+function initContactForm() {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('contact-name').value.trim();
+        const email = document.getElementById('contact-email').value.trim();
+        const subject = document.getElementById('contact-subject').value.trim();
+        const message = document.getElementById('contact-message').value.trim();
+
+        const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+        const mailto = `mailto:bill.adjagboni@epitech.eu?subject=${encodeURIComponent(subject || 'Portfolio Contact')}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailto;
+    });
+}
+
+/* ========================================
+   MOUSE PARALLAX — HERO
+   ======================================== */
+function initMouseParallax() {
+    const hero = document.getElementById('hero');
+    const avatar = document.querySelector('.hero-avatar');
+    const tags = document.querySelectorAll('.floating-tag');
+    const orbits = document.querySelectorAll('.avatar-orbit');
+    if (!hero || !avatar) return;
+
+    hero.addEventListener('mousemove', (e) => {
+        const rect = hero.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+        avatar.style.transform = `translate(${x * -20}px, ${y * -20}px)`;
+
+        tags.forEach((tag, i) => {
+            const speed = 30 + i * 10;
+            tag.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+        });
+
+        orbits.forEach((orbit, i) => {
+            const rot = i === 0 ? x * 5 : -x * 3;
+            orbit.style.transform = `translate(-50%, -50%) rotate(${rot}deg)`;
+        });
+    });
+
+    hero.addEventListener('mouseleave', () => {
+        avatar.style.transform = '';
+        tags.forEach(tag => tag.style.transform = '');
+        orbits.forEach(orbit => orbit.style.transform = '');
+    });
+}
+
+/* ========================================
+   SCROLL PARALLAX
+   ======================================== */
+function initScrollParallax() {
+    const sections = document.querySelectorAll('section');
+    if (!sections.length) return;
+
+    window.addEventListener('scroll', () => {
+        const scrollY = window.pageYOffset;
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            const speed = 0.04;
+            const yOffset = rect.top * speed;
+            section.style.backgroundPosition = `50% ${yOffset}px`;
+        });
+    }, { passive: true });
+}
+
+/* ========================================
+   ACTIVE NAV LINK
+   ======================================== */
+function initActiveNav() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    if (!sections.length || !navLinks.length) return;
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+                });
+            }
+        });
+    }, { threshold: 0.3 });
+
+    sections.forEach(section => observer.observe(section));
+}
+
+/* ========================================
+   NAVBAR SCROLL EFFECT
+   ======================================== */
+function initNavbarScroll() {
+    const navbar = document.getElementById('navbar');
+    if (!navbar) return;
+
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
+}
+
+/* ========================================
+   THEME TOGGLE WITH PERSISTENCE
+   ======================================== */
+function initThemeToggle() {
+    const themeBtn = document.getElementById('theme-btn');
+    if (!themeBtn) return;
+
+    let savedTheme = 'dark';
+    try {
+        savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+    } catch (e) { /* ignore */ }
+
+    const root = document.documentElement;
+    root.setAttribute('data-theme', savedTheme);
+
+    themeBtn.addEventListener('click', () => {
+        const isLight = root.getAttribute('data-theme') === 'light';
+        const next = isLight ? 'dark' : 'light';
+        root.setAttribute('data-theme', next);
+        try {
+            localStorage.setItem('portfolio-theme', next);
+        } catch (e) { /* ignore */ }
+    });
+}
+
+/* ========================================
+   SCROLL REVEAL
+   ======================================== */
+function initReveal() {
+    const revealEls = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
+    if (!revealEls.length) return;
+
+    const obs = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => obs.observe(el));
+}
+
+/* ========================================
+   INIT
+   ======================================== */
 document.addEventListener('DOMContentLoaded', () => {
     const langBtn = document.getElementById('lang-btn');
     if (langBtn) {
@@ -270,24 +679,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateTexts();
     typewrite();
-
-    // Theme toggle (simple)
-    const themeBtn = document.getElementById('theme-btn');
-    if (themeBtn) {
-        themeBtn.addEventListener('click', () => {
-            const root = document.documentElement;
-            const isLight = root.getAttribute('data-theme') === 'light';
-            root.setAttribute('data-theme', isLight ? 'dark' : 'light');
-        });
-    }
-
-    // Simple reveal on scroll
-    const revealEls = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
-    const obs = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) entry.target.classList.add('visible');
-        });
-    }, { threshold: 0.1 });
-    revealEls.forEach(el => obs.observe(el));
+    initThemeToggle();
+    initReveal();
+    initParticles();
+    initHamburger();
+    initProjectFilters();
+    initContactForm();
+    initMouseParallax();
+    initScrollParallax();
+    initActiveNav();
+    initNavbarScroll();
 });
-
