@@ -1098,12 +1098,16 @@ section {
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 28px;
-    transition: var(--transition);
+    transition: transform 0.2s ease-out, border-color 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
     gap: 12px;
     position: relative;
     overflow: hidden;
+}
+
+.project-card:hover {
+    translate: 0 -6px;
 }
 
 .project-card::before {
@@ -1125,7 +1129,6 @@ section {
 
 .project-card:hover {
     border-color: var(--border-hover);
-    transform: translateY(-6px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), var(--shadow-glow);
 }
 
@@ -1210,7 +1213,6 @@ section {
 :root[data-theme="light"] .project-card:hover {
     border-color: var(--purple);
     box-shadow: 0 15px 40px rgba(108, 99, 255, 0.12);
-    transform: translateY(-8px);
 }
 
 .project-card h3 {

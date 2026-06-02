@@ -802,6 +802,26 @@
     </div>
   </footer>
 
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.module.js"
+    }
+  }
+  </script>
+  <script type="module">
+    import { initThreeScene } from './assets/js/three-scene.js';
+    import { initProject3D } from './assets/js/project-3d.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const cleanup = initThreeScene();
+      if (cleanup) {
+        window.__threeActive = true;
+        window.__threeCleanup = cleanup;
+      }
+      initProject3D();
+    });
+  </script>
   <script src="assets/js/script.js"></script>
 </body>
 

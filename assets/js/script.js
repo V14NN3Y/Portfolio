@@ -702,7 +702,7 @@ document.addEventListener('DOMContentLoaded', () => {
     typewrite();
     initThemeToggle();
     initReveal();
-    initParticles();
+    if (!window.__threeActive) { initParticles(); }
     initHamburger();
     initProjectFilters();
     initContactForm();
