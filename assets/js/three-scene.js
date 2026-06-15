@@ -4,6 +4,8 @@
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.module.js';
 
 export function initThreeScene() {
+  if (window.innerWidth < 768) return false;
+
   const hero = document.getElementById('hero');
   const canvas = document.getElementById('particles-canvas');
   if (!hero || !canvas) return false;
@@ -195,11 +197,10 @@ export function initThreeScene() {
   /* ---- Theme adaptation ---- */
   const themeObserver = new MutationObserver(() => {
     const light = isLight();
-    const pColor = light ? '#6c63ff' : '#6c63ff';
-    coreMat.color.set(light ? 0x6c63ff : 0x6c63ff);
-    coreMat.opacity = light ? 0.7 : 0.9;
-    pMat.color.set(light ? 0x6c63ff : 0x6c63ff);
-    pMat.opacity = light ? 0.25 : 0.4;
+    coreMat.color.set(light ? 0x8a84ff : 0x6c63ff);
+    coreMat.opacity = light ? 0.6 : 0.9;
+    pMat.color.set(light ? 0x8a84ff : 0x6c63ff);
+    pMat.opacity = light ? 0.2 : 0.4;
   });
   themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 
@@ -238,8 +239,8 @@ export function initThreeScene() {
 
     particles.rotation.y += 0.0002;
 
-    camera.position.x += (currentX * 2.5 - camera.position.x) * 0.03;
-    camera.position.y += (-currentY * 2 + 0.5 - camera.position.y) * 0.03;
+    camera.position.x += (currentX * 1.2 - camera.position.x) * 0.03;
+    camera.position.y += (-currentY * 0.8 + 0.5 - camera.position.y) * 0.03;
     camera.lookAt(0, 0.3, 0);
 
     renderer.render(scene, camera);
