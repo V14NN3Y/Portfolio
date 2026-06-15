@@ -122,7 +122,7 @@
       <div class="hero-avatar reveal-left">
         <div class="avatar-ring">
           <div class="avatar-ring-inner">
-            <img src="assets/img/Moi.JPG" alt="Bill Adjagboni" class="avatar-img" loading="lazy" />
+            <img src="assets/img/Moi.webp" alt="Bill Adjagboni" class="avatar-img" loading="lazy" width="280" height="280" />
           </div>
         </div>
         <div class="avatar-orbit orbit-1">
@@ -169,9 +169,15 @@
             Epitech Bénin,
             j'ai développé un vrai goût pour le partage de connaissances et la coordination d'équipe technique.
           </p>
+          <p data-t9n="about.p4">
+            Ce qui me distingue ? Une combinaison rare de compétences : du <strong>C embarqué</strong> (Arduino, bas
+            niveau) au <strong>React/TypeScript</strong> (web moderne), en passant par l'<strong>IA et les
+              algorithmes</strong> (Minimax, Alpha-Beta). Peu d'étudiants en 3ème année couvrent un spectre aussi
+            large — du hardware au full stack.
+          </p>
           <div class="about-stats">
             <div class="stat-card">
-              <span class="stat-number gradient-text">7+</span>
+              <span class="stat-number gradient-text">15+</span>
               <span class="stat-label" data-t9n="about.stat-projects">Projets réalisés</span>
             </div>
             <div class="stat-card">
@@ -353,8 +359,73 @@
       </div>
       <div class="projects-grid" id="projects-grid">
 
+        <!-- TrustLink — 2025 (Projet phare) -->
+        <div class="project-card reveal-up featured-card" data-category="web">
+          <div class="project-thumb" style="background: linear-gradient(135deg, #6c63ff, #3b3b8f);">
+            <span>🔗</span>
+          </div>
+          <div class="project-header">
+            <div class="project-icon">🔗</div>
+            <div class="project-links">
+              <span class="proj-link proj-norepo" title="Pas de dépôt public" aria-label="Pas de dépôt public"><svg
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="11" width="18" height="11" rx="2" />
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                </svg></span>
+            </div>
+          </div>
+          <span class="featured-badge" data-t9n="projects.trustlink-badge">🏆 Projet phare</span>
+          <h3 data-t9n="projects.trustlink-title">TrustLink — Marketplace Cross-Border</h3>
+          <span class="project-role" data-t9n="projects.trustlink-role">Full Stack Developer</span>
+          <p data-t9n="projects.trustlink-desc">Plateforme de marketplace <strong>cross-border</strong> avec système
+            d'escrow, 3 applications interconnectées, KYC, gestion des litiges, paiements vidéo et 22 tables en base
+            de données.</p>
+          <div class="project-highlights">
+            <span data-t9n="projects.trustlink-h1">✓ 3 apps interconnectées</span>
+            <span data-t9n="projects.trustlink-h2">✓ Système d'escrow & KYC</span>
+            <span data-t9n="projects.trustlink-h3">✓ 22 tables BDD</span>
+            <span data-t9n="projects.trustlink-h4">✓ Gestion des litiges</span>
+          </div>
+          <div class="project-tags">
+            <span>Next.js</span><span>Supabase</span><span>Stripe</span><span>KYC</span><span>2025</span>
+          </div>
+        </div>
+
+        <!-- Coding Tech Games — 2025 -->
+        <div class="project-card reveal-up" data-category="web">
+          <div class="project-thumb" style="background: linear-gradient(135deg, #00d4ff, #0066cc);">
+            <span>🎮</span>
+          </div>
+          <div class="project-header">
+            <div class="project-icon">🎮</div>
+            <div class="project-links">
+              <span class="proj-link proj-norepo" title="Pas de dépôt public" aria-label="Pas de dépôt public"><svg
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="11" width="18" height="11" rx="2" />
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                </svg></span>
+            </div>
+          </div>
+          <h3 data-t9n="projects.ctg-title">Coding Tech Games — Jeu Multijoueur</h3>
+          <span class="project-role" data-t9n="projects.ctg-role">Full Stack Developer</span>
+          <p data-t9n="projects.ctg-desc">Jeu multijoueur compétitif avec plateaux interactifs et défis algorithmiques
+            en temps réel. Codez pour progresser et affrontez d'autres joueurs grâce à l'exécution de code via Piston
+            API.</p>
+          <div class="project-highlights">
+            <span data-t9n="projects.ctg-h1">✓ Multijoueur temps réel</span>
+            <span data-t9n="projects.ctg-h2">✓ Exécution code Piston API</span>
+            <span data-t9n="projects.ctg-h3">✓ Plateaux interactifs</span>
+          </div>
+          <div class="project-tags">
+            <span>Next.js</span><span>Supabase</span><span>Piston API</span><span>TypeScript</span><span>2025</span>
+          </div>
+        </div>
+
         <!-- Vote BDE — 2026 -->
         <div class="project-card reveal-up" data-category="web">
+          <div class="project-thumb" style="background: linear-gradient(135deg, #22c55e, #166534);">
+            <span>🗳️</span>
+          </div>
           <div class="project-header">
             <div class="project-icon">🗳️</div>
             <div class="project-links">
@@ -383,6 +454,9 @@
 
         <!-- StockControl — 2026 -->
         <div class="project-card reveal-up" data-category="web">
+          <div class="project-thumb" style="background: linear-gradient(135deg, #f59e0b, #92400e);">
+            <span>📦</span>
+          </div>
           <div class="project-header">
             <div class="project-icon">📦</div>
             <div class="project-links">
@@ -411,6 +485,9 @@
 
         <!-- StaffBar — 2025 -->
         <div class="project-card reveal-up" data-category="web">
+          <div class="project-thumb" style="background: linear-gradient(135deg, #8b5cf6, #5b21b6);">
+            <span>💼</span>
+          </div>
           <div class="project-header">
             <div class="project-icon">💼</div>
             <div class="project-links">
@@ -422,21 +499,24 @@
             </div>
           </div>
           <h3 data-t9n="projects.staffbar-title">StaffBar</h3>
-          <span class="project-role" data-t9n="projects.role-frontend">Frontend Developer</span>
-          <p data-t9n="projects.staffbar-desc">Plateforme moderne de mise en relation candidats/recruteurs avec système
-            de messagerie en temps réel, filtres avancés et gestion de profils.</p>
+          <span class="project-role" data-t9n="projects.role-web-fullstack">Full Stack Developer</span>
+          <p data-t9n="projects.staffbar-desc">Plateforme de recrutement spécialisée dans l'hôtellerie et la restauration
+            avec messagerie en temps réel via Supabase, filtres avancés et gestion de profils.</p>
           <div class="project-highlights">
             <span data-t9n="projects.staffbar-h1">✓ Auth & gestion de profils</span>
             <span data-t9n="projects.staffbar-h2">✓ Messagerie intégrée</span>
             <span data-t9n="projects.staffbar-h3">✓ Filtres avancés</span>
           </div>
           <div class="project-tags">
-            <span>React</span><span>TypeScript</span><span>2025</span>
+            <span>React</span><span>TypeScript</span><span>Supabase</span><span>2025</span>
           </div>
         </div>
 
         <!-- Marketplace — 2025 -->
         <div class="project-card reveal-up" data-category="web">
+          <div class="project-thumb" style="background: linear-gradient(135deg, #ec4899, #9d174d);">
+            <span>🛒</span>
+          </div>
           <div class="project-header">
             <div class="project-icon">🛒</div>
             <div class="project-links">
@@ -447,23 +527,25 @@
                 </svg></a>
             </div>
           </div>
-          <h3 data-t9n="projects.marketplace-title">Marketplace Backend</h3>
-          <span class="project-role" data-t9n="projects.role-backend">Backend Developer</span>
-          <p data-t9n="projects.marketplace-desc">Backend e-commerce robuste avec système de
-            publication/modification/suppression d'annonces et interface d'administration dynamique pour la gestion de
-            contenu.</p>
+          <h3 data-t9n="projects.marketplace-title">Merch Exchange — Marketplace Musicale</h3>
+          <span class="project-role" data-t9n="projects.role-web-fullstack">Full Stack Developer</span>
+          <p data-t9n="projects.marketplace-desc">Marketplace dédiée aux articles de musique avec publication d'annonces,
+            interface d'administration Django dynamique et gestion complète des utilisateurs.</p>
           <div class="project-highlights">
             <span data-t9n="projects.marketplace-h1">✓ CRUD annonces</span>
             <span data-t9n="projects.marketplace-h2">✓ Admin interface</span>
             <span data-t9n="projects.marketplace-h3">✓ Gestion utilisateurs</span>
           </div>
           <div class="project-tags">
-            <span>Django</span><span>Python</span><span>2025</span>
+            <span>Django</span><span>Python</span><span>Music</span><span>2025</span>
           </div>
         </div>
 
         <!-- Gomoku AI — 2025 -->
         <div class="project-card reveal-up" data-category="system">
+          <div class="project-thumb" style="background: linear-gradient(135deg, #ef4444, #991b1b);">
+            <span>🧠</span>
+          </div>
           <div class="project-header">
             <div class="project-icon">🧠</div>
             <div class="project-links">
@@ -490,6 +572,9 @@
 
         <!-- Zappy — 2025 -->
         <div class="project-card reveal-up" data-category="system">
+          <div class="project-thumb" style="background: linear-gradient(135deg, #14b8a6, #115e59);">
+            <span>🎮</span>
+          </div>
           <div class="project-header">
             <div class="project-icon">🎮</div>
             <div class="project-links">
@@ -517,6 +602,9 @@
 
         <!-- Arcade Engine — 2024 -->
         <div class="project-card reveal-up" data-category="system">
+          <div class="project-thumb" style="background: linear-gradient(135deg, #6b7280, #374151);">
+            <span>🕹️</span>
+          </div>
           <div class="project-header">
             <div class="project-icon">🕹️</div>
             <div class="project-links">
